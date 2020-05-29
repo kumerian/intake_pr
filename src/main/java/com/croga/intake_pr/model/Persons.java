@@ -23,4 +23,16 @@ public class Persons {
         }
         return personsToReturn;
     }
+
+    public Persons getPersonsByNumberOfChildren(int number) {
+        Persons personsToReturn = new Persons();
+        for(Person doesThisPersonHaveTheNumberOfChildren : this.persons) {
+            if (doesThisPersonHaveTheNumberOfChildren.children.size() >= number) {
+                personsToReturn.persons.add(doesThisPersonHaveTheNumberOfChildren);
+            }
+        }
+        return personsToReturn;
+    }
+
+
 }
